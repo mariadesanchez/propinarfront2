@@ -48,7 +48,7 @@ const Checkout = () => {
     };
 
     try {
-      const url_preference = "https://propinar-backe.vercel.app/create_preference";
+      const url_preference = "https://vercel.com/mariadesanchez/propin-ar-back2/create_preference";
    
 
       let response = await axios.post(url_preference, {
