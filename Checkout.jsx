@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
@@ -8,7 +9,7 @@ import axios from "axios";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import "./Checkout.css"; // Archivo CSS para estilos adicionales
-
+import QRCodeGenerator from './QRCodeGenerator'
 
 import { useLocation } from "react-router-dom";
 import Rating from './Rating'
@@ -26,7 +27,7 @@ const Checkout = () => {
   const [preferenceId, setPreferenceId] = useState(null);
   const [unitPriceInput, setUnitPriceInput] = useState("");
   const [error, setError] = useState("");
-  const [urlApp, setUrlApp] = useState("https://propinare.vercel.app");
+  const [urlApp, setUrlApp] = useState("https://propinarfront2.vercel.app/checkout");
   const [user, setUser] = useState("");
   const updateUser = () => {
     const storedUser = localStorage.getItem('user');
