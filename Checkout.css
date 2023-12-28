@@ -1,0 +1,51 @@
+.checkout-container {
+    background-color: #f2f2f2;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-image {
+    margin-bottom: 10px;
+    /* Ajusta esta distancia */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.animated-text {
+    animation: moveText 2s infinite alternate ease-in-out, blinkText 2s infinite ease-in-out;
+}
+
+@keyframes moveText {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(5px);
+        /* Ajusta esta distancia */
+    }
+}
+
+@keyframes blinkText {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+        /* Ajusta la opacidad */
+    }
+}
+
+
+/* Checkout.css */
+
+.qrcode-container {
+    width: 150px;
+    /* Ajusta el tamaño según tus preferencias */
+    height: 150px;
+    margin-top: 20px;
+}
