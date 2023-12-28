@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-undef */
 
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
@@ -10,7 +9,6 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import "./Checkout.css"; // Archivo CSS para estilos adicionales
 import QRCodeGenerator from './QRCodeGenerator'
-
 import { useLocation } from "react-router-dom";
 import Rating from './Rating'
 
