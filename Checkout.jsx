@@ -97,7 +97,7 @@ const Checkout = () => {
         </div>
       </>):
     <div className="checkout-container">
-      <img src="../images/AvatarLucky.png" alt="AvatarLucky" className="avatar-image" />
+      <img src="../images/mantequeriaMp.png" alt="AvatarLucky" className="avatar-image" />
       <h4 className="animated-text">Transfiriendo a...</h4>
 
       <h3>Lucky-Snchz</h3>
