@@ -120,8 +120,8 @@ const Checkout = () => {
       >
         Mi Propina
       </Button>)}
-   {/* <QRCodeGenerator urlApp={urlApp}/> */}
-   <img src="../images/mantequeriaMp.png" alt="AvatarLucky" className="qr-image" />
+   <QRCodeGenerator urlApp={urlApp}/>
+   {/* <img src="../images/mantequeriaMp.png" alt="AvatarLucky" className="qr-image" /> */}
 
     </div>
     }
