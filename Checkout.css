@@ -10,16 +10,16 @@
 .avatar-image {
     margin-bottom: 10px;
     /* Ajusta esta distancia */
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 .qr-image {
     margin-bottom: 10px;
     /* Ajusta esta distancia */
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
 }
 
 .animated-text {
