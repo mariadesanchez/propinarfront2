@@ -8,7 +8,6 @@ import axios from "axios";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import "./Checkout.css"; // Archivo CSS para estilos adicionales
-import QRCodeGenerator from './QRCodeGenerator'
 import { useLocation } from "react-router-dom";
 
 
@@ -26,7 +25,6 @@ const Checkout = () => {
   const [unitPriceInput, setUnitPriceInput] = useState("");
   const [error, setError] = useState("");
   //para Generar el QR que se imprime
-  const [urlApp, setUrlApp] = useState("https://propinarfront2.vercel.app/checkout");
   const [user, setUser] = useState("");
   const updateUser = () => {
     const storedUser = localStorage.getItem('user');
@@ -120,7 +118,7 @@ const Checkout = () => {
       >
         Pagar
       </Button>)}
-   <QRCodeGenerator urlApp={urlApp}/>
+
    {/* <img src="../images/mantequeriaMp.png" alt="AvatarLucky" className="qr-image" /> */}
 
     </div>
