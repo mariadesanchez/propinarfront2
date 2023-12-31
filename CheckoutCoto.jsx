@@ -91,8 +91,8 @@ const Checkout = () => {
         </div>
       </>):
     <div className="checkout-container">
-      <img src="../images/AvatarLucky.png" alt="AvatarLucky" className="avatar-image" />
-      <h4 className="animated-text">Transfiriendo a...</h4>
+      <img src="../images/Coto.png" alt="AvatarLucky" className="avatar-image" />
+      {/* <h4 className="animated-text">Transfiriendo a...</h4> */}
 
       <h3>Supermercado Coto</h3>
       <TextField
