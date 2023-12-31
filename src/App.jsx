@@ -24,7 +24,7 @@ function App() {
         {/* Ruta por defecto, redirige a /checkout */}
         <Route path="/" element={<Navigate to="/checkout" />} />
         {/* Ruta para Checkout */}
-        {/* <Route path="/checkout" element={<CheckoutCoto/>} /> */}
+        <Route path="/checkout" element={<CheckoutCoto/>} />
         <Route path="/checkout" element={<CheckoutVea/>} />
         {/* Ruta para Rating */}
    
