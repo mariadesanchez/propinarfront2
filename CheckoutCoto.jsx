@@ -25,11 +25,7 @@ const Checkout = () => {
   const [unitPriceInput, setUnitPriceInput] = useState("");
   const [error, setError] = useState("");
   //para Generar el QR que se imprime
-  const [user, setUser] = useState("");
-  const updateUser = () => {
-    const storedUser = localStorage.getItem('user');
-    setUser(storedUser || 'Lucky Snchz');
-  };
+ 
   const createPreference = async () => {
     const unitPrice = parseFloat(unitPriceInput);
 
@@ -81,7 +77,7 @@ const Checkout = () => {
   useEffect(() => {
     if (paramValue === "approved") {
       setParamValueApproved(true);
-      updateUser();
+   
     }
   }, [paramValue]);
   return (
@@ -98,7 +94,7 @@ const Checkout = () => {
       <img src="../images/AvatarLucky.png" alt="AvatarLucky" className="avatar-image" />
       <h4 className="animated-text">Transfiriendo a...</h4>
 
-      <h3>Lucky-Snchz</h3>
+      <h3>Supermercado Coto</h3>
       <TextField
         type="number"
         label="Importe a Pagar"
