@@ -5,36 +5,24 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import CheckoutCoto from '../CheckoutCoto';
 import CheckoutVea from '../CheckoutVea';
 
-
 function App() {
-  const [user, setUser] = useState('');
-
-  useEffect(() => {
-    // Recuperar el valor del usuario desde el LocalStorage
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      setUser(storedUser);
-    }
-  }, []); // El segundo argumento [] asegura que useEffect se ejecute solo una vez al montar el componente
+ // El segundo argumento [] asegura que useEffect se ejecute solo una vez al montar el componente
 
   return (
     <Router>
       <Routes>
-        {/* Ruta por defecto, redirige a /checkout */}
         <Route path="/" element={<Navigate to="/checkout" />} />
-        {/* Ruta para Checkout */}
-       <CheckoutCoto/>
-       <CheckoutVea/>
-    
+
+        {/* Utiliza un contenedor flex para colocar CheckoutCoto y CheckoutVea uno al lado del otro */}
+        <div style={{ display: 'flex' }}>
+          <CheckoutCoto style={{ flex: 1, marginRight: '10px' }} />
+          <CheckoutVea style={{ flex: 1 }} />
+        </div>
+
         {/* Ruta para Rating */}
-   
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
-
-
-
