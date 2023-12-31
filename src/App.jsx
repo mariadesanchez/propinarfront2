@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import CheckoutCoto from '../CheckoutCoto';
+import CheckoutVea from '../CheckoutVea';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Navigate to="/checkout" />} />
         {/* Ruta para Checkout */}
         <Route path="/checkout" element={<CheckoutCoto/>} />
+        <Route path="/checkout" element={<CheckoutVea/>} />
         {/* Ruta para Rating */}
    
       </Routes>
