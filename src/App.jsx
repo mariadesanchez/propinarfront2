@@ -1,21 +1,10 @@
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import CheckoutCoto from '../CheckoutCoto';
 import CheckoutVea from '../CheckoutVea';
+import VideoCallRoom from './Component/VideoCallRoom';
 
 function App() {
-  const [user, setUser] = useState('');
-
-  useEffect(() => {
-    // Recuperar el valor del usuario desde el LocalStorage
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      setUser(storedUser);
-    }
-  }, []); // El segundo argumento [] asegura que useEffect se ejecute solo una vez al montar el componente
-
   return (
     <Router>
       <Routes>
@@ -25,7 +14,8 @@ function App() {
         {/* Ruta para Checkout que renderiza ambos componentes con estilos */}
         <Route path="/checkout" element={<CheckoutContainer />} />
         
-        {/* Ruta para Rating */}
+        {/* Ruta para VideoCallRoom */}
+        <Route path="/video-call" element={<VideoCallRoom />} />
       </Routes>
     </Router>
   );
@@ -33,16 +23,22 @@ function App() {
 
 const CheckoutContainer = () => {
   return (
-    <div style={{ display: 'flex', gap: '20px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', gap: '20px' }}>
       <div style={{ flex: 1, maxWidth: '300px' }}>
         <CheckoutCoto />
       </div>
       <div style={{ flex: 1, maxWidth: '300px' }}>
         <CheckoutVea />
       </div>
+      <div style={{ flex: 1, maxWidth: '80px' }}>
+        {/* Ajusta maxWidth según tus preferencias */}
+        <VideoCallRoom />
+      </div>
     </div>
   );
 };
 
 export default App;
+
+
 
