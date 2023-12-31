@@ -22,7 +22,7 @@ function App() {
         {/* Ruta por defecto, redirige a /checkout */}
         <Route path="/" element={<Navigate to="/checkout" />} />
         
-        {/* Ruta para Checkout que renderiza ambos componentes */}
+        {/* Ruta para Checkout que renderiza ambos componentes con estilos */}
         <Route path="/checkout" element={<CheckoutContainer />} />
         
         {/* Ruta para Rating */}
@@ -33,11 +33,16 @@ function App() {
 
 const CheckoutContainer = () => {
   return (
-    <>
-      <CheckoutCoto />
-      <CheckoutVea />
-    </>
+    <div style={{ display: 'flex', gap: '20px' }}>
+      <div style={{ flex: 1, maxWidth: '300px' }}>
+        <CheckoutCoto />
+      </div>
+      <div style={{ flex: 1, maxWidth: '300px' }}>
+        <CheckoutVea />
+      </div>
+    </div>
   );
 };
 
 export default App;
+
