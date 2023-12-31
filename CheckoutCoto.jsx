@@ -17,7 +17,7 @@ const Checkout = () => {
   useEffect(() => {
     localStorage.setItem('comments', JSON.stringify([]));
   }, []);
-  initMercadoPago(import.meta.env.VITE_PUBLICKEY, {
+  initMercadoPago(import.meta.env.VITE_PUBLICKEY_COTO, {
     locale: "es-AR",
   });
 
