@@ -10,7 +10,7 @@ import TextField from "@mui/material/TextField";
 import "./Checkout.css"; // Archivo CSS para estilos adicionales
 import QRCodeGenerator from './QRCodeGenerator'
 import { useLocation } from "react-router-dom";
-import Rating from './Rating'
+
 
 
 // Componente
@@ -93,7 +93,7 @@ const Checkout = () => {
         
         <div style={{ textAlign: 'center', fontFamily: 'Arial, sans-serif', fontSize: '16px' }}>
    
-          <Rating />
+      
         </div>
       </>):
     <div className="checkout-container">
@@ -103,7 +103,7 @@ const Checkout = () => {
       <h3>Lucky-Snchz</h3>
       <TextField
         type="number"
-        label="Tu Propina"
+        label="Importe a Pagar"
         variant="outlined"
         value={unitPriceInput}
         onChange={handlePriceChange}
@@ -118,7 +118,7 @@ const Checkout = () => {
         onClick={handleBuy}
         style={{ backgroundColor: "#009ee3", color: "#fff" }}
       >
-        Mi Propina
+        Pagar
       </Button>)}
    <QRCodeGenerator urlApp={urlApp}/>
    {/* <img src="../images/mantequeriaMp.png" alt="AvatarLucky" className="qr-image" /> */}

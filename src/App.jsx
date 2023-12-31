@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Checkout from '../Checkout';
-import Rating from '../Rating';
+import CheckoutCoto from '../CheckoutCoto';
+
 
 function App() {
   const [user, setUser] = useState('');
@@ -21,9 +22,9 @@ function App() {
         {/* Ruta por defecto, redirige a /checkout */}
         <Route path="/" element={<Navigate to="/checkout" />} />
         {/* Ruta para Checkout */}
-        <Route path="/checkout" element={<Checkout user={user} />} />
+        <Route path="/checkout" element={<CheckoutCoto/>} />
         {/* Ruta para Rating */}
-        <Route path="/rating" element={<Rating />} />
+   
       </Routes>
     </Router>
   );
