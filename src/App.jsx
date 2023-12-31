@@ -5,8 +5,6 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import CheckoutCoto from '../CheckoutCoto';
 import CheckoutVea from '../CheckoutVea';
 
-
-
 function App() {
   const [user, setUser] = useState('');
 
@@ -23,18 +21,23 @@ function App() {
       <Routes>
         {/* Ruta por defecto, redirige a /checkout */}
         <Route path="/" element={<Navigate to="/checkout" />} />
-        {/* Ruta para Checkout */}
-        <Route path="/checkout" element={<CheckoutCoto/>} />
-        <Route path="/checkout" element={<CheckoutVea/>} />
+        
+        {/* Ruta para Checkout que renderiza ambos componentes */}
+        <Route path="/checkout" element={<CheckoutContainer />} />
+        
         {/* Ruta para Rating */}
-   
       </Routes>
     </Router>
   );
 }
 
+const CheckoutContainer = () => {
+  return (
+    <>
+      <CheckoutCoto />
+      <CheckoutVea />
+    </>
+  );
+};
+
 export default App;
-
-
-
-
