@@ -16,7 +16,7 @@ function App() {
         {/* Utiliza un contenedor flex para colocar CheckoutCoto y CheckoutVea uno al lado del otro */}
         <div style={{ display: 'flex' }}>
           <CheckoutCoto style={{ flex: 1, marginRight: '10px' }} />
-          <CheckoutVea style={{ flex: 1 }} />
+          {/* <CheckoutVea style={{ flex: 1 }} /> */}
         </div>
 
         {/* Ruta para Rating */}
